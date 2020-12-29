@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/server/node_modules
+/server/package-lock.json
+/fancy_rats/node_modules
+/fancy_rats/package-lock.json
+/fancy_rats/.pnp
+/fancy_rats/.pnp.js
+
+# testing
+/fancy_rats/coverage
+
+# production
+/fancy_rats/build
+
+# misc
+/fancy_rats.DS_Store
+/fancy_rats.env.local
+/fancy_rats.env.development.local
+/fancy_rats.env.test.local
+/fancy_rats.env.production.local
+
+/fancy_ratsnpm-debug.log*
+/fancy_ratsyarn-debug.log*
+/fancy_ratsyarn-error.log*
