@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import RatList from './components/RatList'
 import RatSort from './components/RatSort'
+import Header from './components/Header'
 
 function App() {
 
@@ -16,7 +17,6 @@ function App() {
   },[])
 
   const handleSortSelection = (newSort) => {
-    console.log(rats)
     setSort(newSort)
   }
 
@@ -27,14 +27,14 @@ function App() {
       } else {
         return 1
       }
-    return 0
   })
 
   return (
-    <div className="App">
+    <>
+      <Header></Header>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
       <RatList rats={rats}></RatList>
-    </div>
+    </>
   );
 }
 
