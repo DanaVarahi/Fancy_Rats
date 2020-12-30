@@ -4,7 +4,6 @@ h1 {
   font-size: 3em;
   margin: 0;
   margin-top:0.5em;
-  z-index: 1;
   text-shadow: 2px 2px 2px rgb(191, 101, 233);
   
 }
@@ -14,6 +13,13 @@ h2 {
   font-size: 1.8em;
   margin: 0;
   color:rgb(191, 101, 233);
+}
+
+h3 {
+  font-family: 'Nerko One', cursive;
+  font-size: 1.2em;
+  margin: 0;
+  color:rgb(3, 3, 3);
 }
 
 /* Header Styles */
@@ -29,4 +35,44 @@ header {
 
 header img {
   max-height: 10em;
+}
+
+/* RatList styles */
+
+ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  border-radius: 1em;
+}
+
+/* Rat styles */
+
+li {
+  margin: 1em;
+  padding: 1em;
+  flex-basis: 25%;
+  border-style: dotted;
+  border-radius: 1em;
+}
+
+/* RatSort styles*/
+
+select {
+  background-color:rgb(228, 187, 247);
+  padding: 0.5em;
+  font-size:1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  margin-top: 1em;;
+}
+
+#sort {
+  display: flex;
+  justify-content: center;
 }
