@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+/* App Styles */
+h1 {
+  font-family: 'Nerko One', cursive;
+  font-size: 3em;
+  margin: 0;
+  margin-top:0.5em;
+  z-index: 1;
+  text-shadow: 2px 2px 2px rgb(191, 101, 233);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: 'Nerko One', cursive;
+  font-size: 1.8em;
+  margin: 0;
+  color:rgb(191, 101, 233);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Header Styles */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  box-shadow: 2px 2px 5px rgb(228, 187, 247);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header img {
+  max-height: 10em;
 }

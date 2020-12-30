@@ -1,4 +1,5 @@
 const Rat =({name, age, coloring, eyes, markings, body, coat}) => {
+    
     return(
         <li>
             <h2>{name}</h2>
