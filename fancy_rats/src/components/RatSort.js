@@ -6,10 +6,13 @@ const RatSort = ({handleSortSelection, sortOptions }) => {
     }) 
 
     return (
-        <select onChange={(evt) => handleSortSelection(evt.target.value)}>
-            <option defaultValue>Sort by </option>
-            {options}
+        <div id="sort">
+            <select onChange={(evt) => handleSortSelection(evt.target.value)}>
+                 <option defaultValue>Sort by </option>
+                {options}
         </select>
+        </div>
+      
     )
 }
 
