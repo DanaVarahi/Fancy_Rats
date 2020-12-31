@@ -8,7 +8,7 @@ function App() {
 
   const [rats, setRats] = useState([])
   const [sort, setSort] = useState("")
-  const sortCategories= ['name', 'eyes', 'markings', 'body', 'coat']
+  const sortCategories= ['name', 'age', 'eyes', 'markings', 'body', 'coat']
 
   useEffect(() => {
     fetch('http://localhost:3000/api/rats')
@@ -21,12 +21,13 @@ function App() {
   }
 
     rats.sort((rat1, rat2) => {
-    
-      if(rat1[sort] < rat2[sort]){
-        return -1
-      } else {
-        return 1
-      }
+      if (sort){
+        if(rat1[sort].toLowerCase() < rat2[sort].toLowerCase()){
+          return -1
+        } else {
+          return 1
+        }
+      }   
   })
 
   return (
