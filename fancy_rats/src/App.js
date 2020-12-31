@@ -31,9 +31,9 @@ function App() {
       return total + number
     }
     const ratTotal = ratNumbers.reduce(getSum)
+    const iconNumber = ratTotal % 74
     
-    // loop throuth ratNameArray and for each letter find a corresponding one in alphabet and return its index
-    return "/images/icons/" + ratTotal + ".png"
+    return "/images/icons/" + iconNumber + ".png"
   }
 
 

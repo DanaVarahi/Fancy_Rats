@@ -57,9 +57,61 @@ li {
   margin: 1em;
   padding: 1em;
   flex-basis: 25%;
+  min-width: 15em;
   border-style: dotted;
   border-radius: 1em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "name icon"
+  "age icon"
+  "color color"
+  "eyes eyes"
+  "mark mark"
+  "body body"
+  "coat coat"
+  ;
 }
+
+.ratIcon {
+  max-width: 6em;
+  max-height: 6em;
+  grid-area: icon;
+}
+
+li h2 {
+  grid-area: name;
+}
+
+li h3 {
+  grid-area: age;
+}
+.color {
+  margin-top: 1em;
+  grid-area: color;
+}
+.eyes {
+  grid-area: eyes;
+}
+
+.mark {
+  grid-area: mark;
+}
+
+.body {
+  grid-area: body;
+}
+
+.coat {
+  grid-area: coat;
+}
+
+li p {
+  margin: 0.2em;
+}
+ 
+
 
 /* RatSort styles*/
 
