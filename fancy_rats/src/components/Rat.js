@@ -1,7 +1,8 @@
-const Rat =({name, age, coloring, eyes, markings, body, coat}) => {
+const Rat =({name, age, coloring, eyes, markings, body, coat, ratIcon }) => {
     
     return(
         <li>
+            <img src={ratIcon} alt="rat icon"></img>
             <h2>{name}</h2>
             <h3>{age.years} yr. {age.months} mo. old</h3>
             <p><b>Color:</b> {coloring}</p>

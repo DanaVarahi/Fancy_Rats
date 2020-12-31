@@ -20,7 +20,13 @@ function App() {
     setSort(newSort)
   }
 
- 
+  const generateRatIcon = (rat) => {
+    const alphabet = ['a',' b', 'c', 'd', 'e', 'f', 'h', 'i' , 'j',' k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    console.log(rat)
+    return "/images/icons/3.png"
+  }
+
+
   rats.sort((rat1, rat2) => {
     if (sort){
   
@@ -42,13 +48,14 @@ function App() {
         }
       }
     }   
+    return 0
   })
   
   return (
     <>
       <Header></Header>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
-      <RatList rats={rats}></RatList>
+      <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
     </>
   );
 }
