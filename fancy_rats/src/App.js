@@ -22,8 +22,18 @@ function App() {
 
   const generateRatIcon = (rat) => {
     const alphabet = ['a',' b', 'c', 'd', 'e', 'f', 'h', 'i' , 'j',' k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    console.log(rat)
-    return "/images/icons/3.png"
+    const ratNameArray = rat.name.toLowerCase().split("")
+    
+    const ratNumbers = ratNameArray.map(letter => {
+      return alphabet.indexOf(letter)
+    })
+    const getSum = (total, number) => {
+      return total + number
+    }
+    const ratTotal = ratNumbers.reduce(getSum)
+    
+    // loop throuth ratNameArray and for each letter find a corresponding one in alphabet and return its index
+    return "/images/icons/" + ratTotal + ".png"
   }
 
 
