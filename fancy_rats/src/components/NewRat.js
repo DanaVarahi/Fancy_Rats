@@ -9,7 +9,7 @@ const NewRat = ({submitNewRat}) => {
  const [eyes, setEyes] = useState("black")
  const [markings, setMarkings] = useState("self")
  const [body, setBody] = useState("Top Ear")
- const [coat, setCoat] = useState("standart")
+ const [coat, setCoat] = useState("standard")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -69,11 +69,12 @@ const NewRat = ({submitNewRat}) => {
 
     setName("")
     setYears(0)
-    setMonths(0)
-    setColor("")
-    setEyes("")
-    setMarkings("")
-    setBody("")
+    setMonths("")
+    setColor("agouti")
+    setEyes("black")
+    setMarkings("self")
+    setBody("Top Ear")
+    setCoat("standard")
  }
 
 return (
@@ -85,9 +86,33 @@ return (
             <div id="age-form">
                 <p>Age:</p>
                 <label for="years">Years:</label>
-                <input type="text" id="years" value={years} onChange={handleYearChange} required></input>
+                <select id="years" onChange={handleYearChange}>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
                 <label for="months">Months:</label>
-                <input type="text" id="months" value={months} onChange={handleMonthChange} required></input>
+                <select id="years" onChange={handleMonthChange}>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
             </div>
             <label for="color">Color:</label>
             <select id="color" onChange={handleColorChange}>

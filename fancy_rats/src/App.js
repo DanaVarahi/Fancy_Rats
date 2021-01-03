@@ -17,6 +17,24 @@ function App() {
       .then( data => setRats(data))
   },[])
 
+  async function postData(url = '', data = {}) {
+  
+    const response = await fetch(url, {
+      method: 'POST', 
+      mode: 'cors', 
+      cache: 'no-cache', 
+      credentials: 'same-origin', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow', 
+      referrerPolicy: 'no-referrer', 
+      body: JSON.stringify(data) 
+    });
+    return response.json(); 
+  }
+
+
   const handleSortSelection = (newSort) => {
     setSort(newSort)
   }
@@ -63,8 +81,8 @@ function App() {
   })
 
  const addNewRat = (submittedRat) => {
-  //  the id will have to be set by database the folowing is a temporary solution to remove a warning in the console.
-   submittedRat._id = Date.now()
+   postData('http://localhost:3000/api/rats', submittedRat)
+   .then(data => console.log(data))
    const updatedRats = [...rats, submittedRat]
    setRats(updatedRats)
  }
