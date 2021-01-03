@@ -7,6 +7,7 @@ const NewRat = ({submitNewRat}) => {
  const [months, setMonths] = useState(0)
  const [color, setColor] = useState("")
  const [eyes, setEyes] = useState("")
+ const [markings, setMarkings] = useState("")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -28,6 +29,10 @@ const NewRat = ({submitNewRat}) => {
      setEyes(evt.target.value)
  }
 
+ const handleMarkingschange = (evt) => {
+     setMarkings(evt.target.value)
+ }
+
  const handleFormSubmit = (evt) => {
     evt.preventDefault();
     const nameToSubmit = name.trim()
@@ -35,6 +40,7 @@ const NewRat = ({submitNewRat}) => {
     const monthsToSubmit = months
     const colorToSubmit = color
     const eyesToSubmit = eyes
+    const markingsToSubmit = markings
 
     if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit ){
         return
@@ -47,12 +53,16 @@ const NewRat = ({submitNewRat}) => {
             months: monthsToSubmit
         },
         coloring: colorToSubmit,
-        eyes: eyesToSubmit
+        eyes: eyesToSubmit,
+        markings: markingsToSubmit
     })
 
     setName("")
     setYears(0)
     setMonths(0)
+    setColor("")
+    setEyes("")
+    setMarkings("")
  }
 
 return (
@@ -86,7 +96,7 @@ return (
                 <option value="odd-eyed">odd-eyed</option>
             </select>
             <label for="markings">Markings:</label>
-            <select id="markings" name="markings">
+            <select id="markings" name="markings" onChange={handleMarkingschange}>
                 <option value="self">self</option>
                 <option value="capped">capped</option>
                 <option value="hooded">hooded</option>
