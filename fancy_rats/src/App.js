@@ -61,12 +61,17 @@ function App() {
     }   
     return 0
   })
+
+  const addNewRat = (evt) => {
+    evt.preventDefault();
+    console.log('New Rat')
+  }
   
   return (
     <>
       <Header></Header>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
-      <NewRat></NewRat>
+      <NewRat addNewRat={addNewRat}></NewRat>
       <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
     </>
   );
