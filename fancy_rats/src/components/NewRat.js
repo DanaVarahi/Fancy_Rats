@@ -5,11 +5,11 @@ const NewRat = ({submitNewRat}) => {
  const [name, setName] = useState("")
  const [years, setYears] = useState(0)
  const [months, setMonths] = useState(0)
- const [color, setColor] = useState("")
- const [eyes, setEyes] = useState("")
- const [markings, setMarkings] = useState("")
- const [body, setBody] = useState("")
- const [coat, setCoat] = useState("")
+ const [color, setColor] = useState("agouti")
+ const [eyes, setEyes] = useState("black")
+ const [markings, setMarkings] = useState("self")
+ const [body, setBody] = useState("Top Ear")
+ const [coat, setCoat] = useState("standart")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -125,7 +125,7 @@ return (
                 <option value="rex">rex</option>
                 <option value="satin">satin</option>
             </select>
-            <input type="radio" id="top-ear" name="body" value="Top Ear" onChange={handleBodyChange}></input>
+            <input type="radio" id="top-ear" name="body" value="Top Ear" onChange={handleBodyChange} checked="checked"></input>
             <label for="top-ear">Top Ear</label>
             <input type="radio" id="dumbo" name="body" value="Dumbo" onChange={handleBodyChange}></input>
             <label for="dumbo">Dumbo</label>
