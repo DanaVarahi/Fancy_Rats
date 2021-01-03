@@ -88,8 +88,8 @@ function App() {
   return (
     <>
       <Header></Header>
-      <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
       <NewRat submitNewRat={ (newRat) => addNewRat(newRat)}></NewRat>
+      <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
       <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
     </>
   );

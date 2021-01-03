@@ -132,3 +132,60 @@ select {
   display: flex;
   justify-content: center;
 }
+
+/* NewRat styles */
+
+form {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em ;
+}
+
+form h2 {
+  margin-bottom: 1em;
+}
+
+form select {
+  padding: 0.1em;
+  margin-right: 0.5em;
+  font-weight: 400;
+}
+
+label {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+form p {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+form input {
+  background-color:rgb(228, 187, 247);
+  border-radius: 0.5em;
+  padding: 0.3em;
+  border-width: 0.1em;;
+}
+
+#age-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#body-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add {
+  font-size:1em ;
+  font-weight: bold;
+  padding: 0.5em;
+}
