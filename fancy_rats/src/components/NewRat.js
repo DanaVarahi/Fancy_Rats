@@ -3,8 +3,9 @@ import React, {useState} from "react";
 const NewRat = ({submitNewRat}) => {
 
  const [name, setName] = useState("")
- const [years, setYears] = useState("")
- const [months, setMonths] = useState("")
+ const [years, setYears] = useState(0)
+ const [months, setMonths] = useState(0)
+ const [color, setColor] = useState("")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -18,13 +19,18 @@ const NewRat = ({submitNewRat}) => {
      setMonths(evt.target.value)
  }
 
+ const handleColorChange = (evt) => {
+     setColor(evt.target.value)
+ }
+
  const handleFormSubmit = (evt) => {
     evt.preventDefault();
     const nameToSubmit = name.trim()
     const yearsToSubmit = years
     const monthsToSubmit = months
+    const colorToSubmit = color
 
-    if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit){
+    if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit ){
         return
     }
     
@@ -33,12 +39,13 @@ const NewRat = ({submitNewRat}) => {
         age: {
             years: yearsToSubmit,
             months: monthsToSubmit
-        }
+        },
+        coloring: colorToSubmit
     })
 
     setName("")
-    setYears("")
-    setMonths("")
+    setYears(0)
+    setMonths(0)
  }
 
 return (
@@ -55,8 +62,8 @@ return (
                 <input type="text" id="months" value={months} onChange={handleMonthChange}></input>
             </div>
             <label for="color">Color:</label>
-            <select id="color" name="color">
-                <option value="agouti">agouti</option>
+            <select id="color" name="color" onChange={handleColorChange}>
+                <option value="agouti" >agouti</option>
                 <option value="cinnamon">cinnamon</option>
                 <option value="fawn">fawn</option>
                 <option value="beige">beige</option>
