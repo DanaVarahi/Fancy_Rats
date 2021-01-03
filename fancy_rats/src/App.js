@@ -62,16 +62,18 @@ function App() {
     return 0
   })
 
-  const addNewRat = (evt) => {
-    evt.preventDefault();
-    console.log('New Rat')
-  }
+ const addNewRat = (submittedRat) => {
+  //  the id will have to be set by database the folowing is a temporary solution to remove a warning in the console.
+   submittedRat._id = Date.now()
+   const updatedRats = [...rats, submittedRat]
+   setRats(updatedRats)
+ }
   
   return (
     <>
       <Header></Header>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
-      <NewRat addNewRat={addNewRat}></NewRat>
+      <NewRat submitNewRat={ (newRat) => addNewRat(newRat)}></NewRat>
       <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
     </>
   );

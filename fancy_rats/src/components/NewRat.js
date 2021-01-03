@@ -1,16 +1,58 @@
-const NewRat = ({addNewRat}) => {
+import React, {useState} from "react";
+
+const NewRat = ({submitNewRat}) => {
+
+ const [name, setName] = useState("")
+ const [years, setYears] = useState("")
+ const [months, setMonths] = useState("")
+
+ const hanldeNameChange = (evt) => {
+     setName(evt.target.value)
+ }
+
+ const handleYearChange = (evt) => {
+     setYears(evt.target.value)
+ }
+
+ const handleMonthChange = (evt) => {
+     setMonths(evt.target.value)
+ }
+
+ const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+    const nameToSubmit = name.trim()
+    const yearsToSubmit = years
+    const monthsToSubmit = months
+
+    if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit){
+        return
+    }
+    
+    submitNewRat({
+        name: nameToSubmit,
+        age: {
+            years: yearsToSubmit,
+            months: monthsToSubmit
+        }
+    })
+
+    setName("")
+    setYears("")
+    setMonths("")
+ }
+
 return (
     <>
         <h2>Add New Rattie</h2>
-        <form onSubmit={addNewRat}>
+        <form onSubmit={handleFormSubmit}>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name"></input>
+            <input type="text" id="name" value={name} onChange={hanldeNameChange}></input>
             <div id="age-form">
                 <p>Age:</p>
                 <label for="years">Years:</label>
-                <input type="text" id="years" name="years"></input>
+                <input type="text" id="years" value={years} onChange={handleYearChange}></input>
                 <label for="months">Months:</label>
-                <input type="text" id="months" name="months"></input>
+                <input type="text" id="months" value={months} onChange={handleMonthChange}></input>
             </div>
             <label for="color">Color:</label>
             <select id="color" name="color">
@@ -54,7 +96,7 @@ return (
             <label for="dumbo">Dumbo</label>
             <input type="radio" id="manx" name="body" value="Manx"></input>
             <label for="manx">Manx</label>
-            <input type="submit"></input>
+            <input type="submit" value="Add"></input>
         </form>
     </>
 )
