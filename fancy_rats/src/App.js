@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import RatList from './components/RatList'
 import RatSort from './components/RatSort'
 import Header from './components/Header'
+import NewRat from './components/NewRat'
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
     <>
       <Header></Header>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
+      <NewRat></NewRat>
       <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
     </>
   );
