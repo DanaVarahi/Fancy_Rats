@@ -6,6 +6,7 @@ const NewRat = ({submitNewRat}) => {
  const [years, setYears] = useState(0)
  const [months, setMonths] = useState(0)
  const [color, setColor] = useState("")
+ const [eyes, setEyes] = useState("")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -23,12 +24,17 @@ const NewRat = ({submitNewRat}) => {
      setColor(evt.target.value)
  }
 
+ const handleEyesChange = (evt) => {
+     setEyes(evt.target.value)
+ }
+
  const handleFormSubmit = (evt) => {
     evt.preventDefault();
     const nameToSubmit = name.trim()
     const yearsToSubmit = years
     const monthsToSubmit = months
     const colorToSubmit = color
+    const eyesToSubmit = eyes
 
     if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit ){
         return
@@ -40,7 +46,8 @@ const NewRat = ({submitNewRat}) => {
             years: yearsToSubmit,
             months: monthsToSubmit
         },
-        coloring: colorToSubmit
+        coloring: colorToSubmit,
+        eyes: eyesToSubmit
     })
 
     setName("")
@@ -72,7 +79,7 @@ return (
                 <option value="chocolate">chocolate</option>
             </select>
             <label for="eyes">Eyes:</label>
-            <select id="eyes" name="eyes">
+            <select id="eyes" name="eyes"onChange={handleEyesChange} >
                 <option value="black">black</option>
                 <option value="ruby">ruby</option>
                 <option value="pink">pink</option>
