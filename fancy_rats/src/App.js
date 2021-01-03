@@ -82,9 +82,7 @@ function App() {
 
  const addNewRat = (submittedRat) => {
    postData('http://localhost:3000/api/rats', submittedRat)
-   .then(data => console.log(data))
-   const updatedRats = [...rats, submittedRat]
-   setRats(updatedRats)
+   .then( responseRat => setRats([...rats, responseRat]))
  }
   
   return (

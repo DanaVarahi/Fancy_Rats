@@ -22,6 +22,10 @@ h3 {
   color:rgb(3, 3, 3);
 }
 
+body {
+  background-color: rgb(243, 226, 235) ;
+}
+
 /* Header Styles */
 
 header {

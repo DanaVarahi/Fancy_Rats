@@ -98,7 +98,7 @@ return (
                     <option value="8">8</option>
                 </select>
                 <label for="months">Months:</label>
-                <select id="years" onChange={handleMonthChange}>
+                <select id="months" onChange={handleMonthChange}>
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
