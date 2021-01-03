@@ -41,10 +41,6 @@ const NewRat = ({submitNewRat}) => {
     const colorToSubmit = color
     const eyesToSubmit = eyes
     const markingsToSubmit = markings
-
-    if(!nameToSubmit || !yearsToSubmit || !monthsToSubmit ){
-        return
-    }
     
     submitNewRat({
         name: nameToSubmit,
@@ -70,13 +66,13 @@ return (
         <h2>Add New Rattie</h2>
         <form onSubmit={handleFormSubmit}>
             <label for="name">Name:</label>
-            <input type="text" id="name" value={name} onChange={hanldeNameChange}></input>
+            <input type="text" id="name" value={name} onChange={hanldeNameChange} required></input>
             <div id="age-form">
                 <p>Age:</p>
                 <label for="years">Years:</label>
-                <input type="text" id="years" value={years} onChange={handleYearChange}></input>
+                <input type="text" id="years" value={years} onChange={handleYearChange} required></input>
                 <label for="months">Months:</label>
-                <input type="text" id="months" value={months} onChange={handleMonthChange}></input>
+                <input type="text" id="months" value={months} onChange={handleMonthChange} required></input>
             </div>
             <label for="color">Color:</label>
             <select id="color" name="color" onChange={handleColorChange}>
