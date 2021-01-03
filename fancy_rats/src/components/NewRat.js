@@ -8,6 +8,8 @@ const NewRat = ({submitNewRat}) => {
  const [color, setColor] = useState("")
  const [eyes, setEyes] = useState("")
  const [markings, setMarkings] = useState("")
+ const [body, setBody] = useState("")
+ const [coat, setCoat] = useState("")
 
  const hanldeNameChange = (evt) => {
      setName(evt.target.value)
@@ -33,6 +35,14 @@ const NewRat = ({submitNewRat}) => {
      setMarkings(evt.target.value)
  }
 
+ const handleBodyChange = (evt) => {
+     setBody(evt.target.value)
+ }
+
+ const handleCoatChange = (evt) => {
+     setCoat(evt.target.value)
+ }
+
  const handleFormSubmit = (evt) => {
     evt.preventDefault();
     const nameToSubmit = name.trim()
@@ -41,6 +51,8 @@ const NewRat = ({submitNewRat}) => {
     const colorToSubmit = color
     const eyesToSubmit = eyes
     const markingsToSubmit = markings
+    const bodyToSubmit = body
+    const coatTosubmit = coat
     
     submitNewRat({
         name: nameToSubmit,
@@ -50,7 +62,9 @@ const NewRat = ({submitNewRat}) => {
         },
         coloring: colorToSubmit,
         eyes: eyesToSubmit,
-        markings: markingsToSubmit
+        markings: markingsToSubmit,
+        body: bodyToSubmit,
+        coat: coatTosubmit
     })
 
     setName("")
@@ -59,6 +73,7 @@ const NewRat = ({submitNewRat}) => {
     setColor("")
     setEyes("")
     setMarkings("")
+    setBody("")
  }
 
 return (
@@ -75,7 +90,7 @@ return (
                 <input type="text" id="months" value={months} onChange={handleMonthChange} required></input>
             </div>
             <label for="color">Color:</label>
-            <select id="color" name="color" onChange={handleColorChange}>
+            <select id="color" onChange={handleColorChange}>
                 <option value="agouti" >agouti</option>
                 <option value="cinnamon">cinnamon</option>
                 <option value="fawn">fawn</option>
@@ -85,14 +100,14 @@ return (
                 <option value="chocolate">chocolate</option>
             </select>
             <label for="eyes">Eyes:</label>
-            <select id="eyes" name="eyes"onChange={handleEyesChange} >
+            <select id="eyes" onChange={handleEyesChange} >
                 <option value="black">black</option>
                 <option value="ruby">ruby</option>
                 <option value="pink">pink</option>
                 <option value="odd-eyed">odd-eyed</option>
             </select>
             <label for="markings">Markings:</label>
-            <select id="markings" name="markings" onChange={handleMarkingschange}>
+            <select id="markings" onChange={handleMarkingschange}>
                 <option value="self">self</option>
                 <option value="capped">capped</option>
                 <option value="hooded">hooded</option>
@@ -103,18 +118,18 @@ return (
                 <option value="Himalayan">Himalayan</option>
             </select>
             <label for="coat">Coat:</label>
-            <select id="coat" name="coat">
+            <select id="coat"  onChange={handleCoatChange}>
                 <option value="standard">standard</option>
                 <option value="hairless">hairless</option>
                 <option value="Harley">Harley</option>
                 <option value="rex">rex</option>
                 <option value="satin">satin</option>
             </select>
-            <input type="radio" id="top-ear" name="body" value="Top Ear"></input>
+            <input type="radio" id="top-ear" name="body" value="Top Ear" onChange={handleBodyChange}></input>
             <label for="top-ear">Top Ear</label>
-            <input type="radio" id="dumbo" name="body" value="Dumbo"></input>
+            <input type="radio" id="dumbo" name="body" value="Dumbo" onChange={handleBodyChange}></input>
             <label for="dumbo">Dumbo</label>
-            <input type="radio" id="manx" name="body" value="Manx"></input>
+            <input type="radio" id="manx" name="body" value="Manx" onChange={handleBodyChange}></input>
             <label for="manx">Manx</label>
             <input type="submit" value="Add"></input>
         </form>
