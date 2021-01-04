@@ -33,8 +33,8 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
-  box-shadow: 2px 2px 5px rgb(228, 187, 247);
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
+  box-shadow: 0px 5px 5px rgb(145, 113, 130);
 }
 
 header img {
@@ -52,9 +52,10 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
   border-radius: 1em;
   padding: 0;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
 }
 
 /* Rat styles */
@@ -78,6 +79,7 @@ li {
   "body body"
   "coat coat"
   ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
 }
 
 .ratIcon {
@@ -122,12 +124,13 @@ li p {
 /* RatSort styles*/
 
 select {
-  background-color:rgb(228, 187, 247);
+  background-color:rgb(191, 187, 247);
   padding: 0.5em;
   font-size:1em;
   font-weight: bold;
   border-radius: 0.5em;
-  margin-top: 1em;;
+  margin-top: 1em;
+  box-shadow: 2px 2px 2px rgb(145, 113, 130);
 }
 
 #sort {
@@ -141,10 +144,11 @@ form {
   width: 60%;
   margin: auto;
   text-align: center;
-  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
   padding: 1em;
   border-radius: 1em;
   margin-top: 1em ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
 }
 
 form h2 {
@@ -190,6 +194,12 @@ form input {
   font-size:1em ;
   font-weight: bold;
   padding: 0.5em;
+  background-color:rgb(191, 187, 247) ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
+}
+
+#add:active {
+  box-shadow: 2px 2px 2px rgb(145, 113, 130);
 }
 
 /* Footer styles */
@@ -199,7 +209,7 @@ form input {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
   padding: 1em;
 
 }
