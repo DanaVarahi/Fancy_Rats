@@ -51,8 +51,10 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
   border-radius: 1em;
+  padding: 0;
 }
 
 /* Rat styles */
@@ -205,3 +207,220 @@ form input {
 #footer-wrapper img {
   max-height: 5em;
 }
+
+/* Responsive design */
+
+@media only screen and (max-width: 1200px){
+
+  form {
+    width: 90%
+  }
+  
+  ul {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer-wrapper{
+    display: block;
+    text-align: center;
+  }
+
+  #footer-wrapper h4 {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+   
+  }
+
+  #footer-wrapper img {
+   margin-left: auto;
+   margin-right: auto;
+   display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  li {
+    min-width: 10em;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  li{
+    flex-basis: 40%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  ul {
+    width: 100%;
+  }
+
+  li {
+    flex-basis: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "icon name"
+    "icon age"
+    "icon color"
+    "icon eyes"
+    "icon mark"
+    "icon body"
+    "icon coat"
+    ;
+  }
+
+  li h2 {
+    grid-area: name;
+  }
+  
+  li h3 {
+    grid-area: age;
+  }
+  .color {
+    margin-top: 1em;
+    grid-area: color;
+  }
+  .eyes {
+    grid-area: eyes;
+  }
+  
+  .mark {
+    grid-area: mark;
+  }
+  
+  .body {
+    grid-area: body;
+  }
+  
+  .coat {
+    grid-area: coat;
+  }
+
+  .ratIcon {
+    max-width: 15em;
+    align-self: center;
+    justify-self:center;
+    grid-area: icon;
+  }
+  header {
+    width: 100%;
+  }
+  
+
+  
+  form {
+    width: 90%;
+    border-radius: 1em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15% 1fr 15% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "l-name name name name"
+    "age age age age"
+    "l-color color l-eyes eyes"
+    "l-markings markings l-coat coat"
+    "body body body body"
+    "add add add add"
+    ;
+  }
+
+  form h2 {
+    grid-area: header;
+  }
+
+  label[for="name"] {
+    grid-area: l-name;
+  }
+  #name {
+    grid-area: name;
+  }
+
+  label[for="color"] {
+    grid-area: l-color;
+  }
+  #color {
+    grid-area: color;
+  }
+
+  label[for="eyes"] {
+    grid-area: l-eyes;
+  }
+  #eyes {
+    grid-area: eyes;
+  }
+
+  label[for="markings"] {
+    grid-area: l-markings;
+  }
+  #marking {
+    grid-area: markings;
+  }
+
+  label[for="coat"] {
+    grid-area: l-coat;
+  }
+  #coat {
+    grid-area: coat;
+  }
+
+  #body-type {
+    grid-area: body;
+  }
+
+  #add {
+    grid-area: add;
+  }
+
+  #age-form {
+    margin: 0;
+    align-items: center;
+    display: grid;
+    grid-area: age;
+    align-items: center;
+    grid-template-columns: 15% 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "age l-years years l-months months"
+  }
+
+  #age-form p{
+    grid-area: age;
+  }
+
+  label[for="years"]{
+    grid-area: l-years;
+  }
+  #years{
+    grid-area: years;
+  } 
+
+  label[for="months"]{
+    grid-area: l-months;
+  }
+  #months{
+    grid-area: months;
+  }
+}
+
+/* 
+To do:
+
+@media only screen and (max-width: 600px){
+ 
+} */
+ 
+
