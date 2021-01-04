@@ -189,3 +189,19 @@ form input {
   font-weight: bold;
   padding: 0.5em;
 }
+
+/* Footer styles */
+
+#footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(rgb(228, 187, 247), rgb(243, 226, 235), rgb(228, 187, 247));
+  padding: 1em;
+
+}
+
+#footer-wrapper img {
+  max-height: 5em;
+}

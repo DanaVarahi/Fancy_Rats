@@ -4,6 +4,7 @@ import RatList from './components/RatList'
 import RatSort from './components/RatSort'
 import Header from './components/Header'
 import NewRat from './components/NewRat'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -91,6 +92,7 @@ function App() {
       <NewRat submitNewRat={ (newRat) => addNewRat(newRat)}></NewRat>
       <RatSort   handleSortSelection={handleSortSelection} sortOptions={sortCategories}></RatSort>
       <RatList rats={rats} generateRatIcon={generateRatIcon}></RatList>
+      <Footer></Footer>
     </>
   );
 }
