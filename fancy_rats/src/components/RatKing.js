@@ -53,7 +53,7 @@ const RatKing = ({rats}) => {
         return bodyPercentages  
     }
   
-
+            console.log("Test line to remove")
     return (
         <>
         <p>Rat King is {ratKingAge()} old</p>
