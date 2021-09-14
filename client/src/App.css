@@ -1,0 +1,435 @@
+/* App Styles */
+h1 {
+  font-family: 'Nerko One', cursive;
+  font-size: 3em;
+  margin: 0;
+  margin-top:0.5em;
+  text-shadow: 2px 2px 2px  rgb(145, 113, 130);
+}
+
+h2 {
+  font-family: 'Nerko One', cursive;
+  font-size: 1.8em;
+  margin: 0;
+  color:rgb(191, 101, 233);
+}
+
+h3 {
+  font-family: 'Nerko One', cursive;
+  font-size: 1.2em;
+  margin: 0;
+  color:rgb(3, 3, 3);
+}
+
+body {
+  background-color: rgb(243, 226, 235) ;
+}
+
+/* Header Styles */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
+  box-shadow: 0px 5px 5px rgb(145, 113, 130);
+}
+
+header img {
+  max-height: 10em;
+}
+
+/* RatList styles */
+
+ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
+  border-radius: 1em;
+  padding: 0;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
+}
+
+/* Rat styles */
+
+li {
+  margin: 1em;
+  padding: 1em;
+  flex-basis: 25%;
+  min-width: 15em;
+  border-style: dotted;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "name icon"
+  "age icon"
+  "color color"
+  "eyes eyes"
+  "mark mark"
+  "body body"
+  "coat coat"
+  ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
+}
+
+.ratIcon {
+  max-width: 6em;
+  max-height: 6em;
+  grid-area: icon;
+}
+
+li h2 {
+  grid-area: name;
+}
+
+li h3 {
+  grid-area: age;
+}
+.color {
+  margin-top: 1em;
+  grid-area: color;
+}
+.eyes {
+  grid-area: eyes;
+}
+
+.mark {
+  grid-area: mark;
+}
+
+.body {
+  grid-area: body;
+}
+
+.coat {
+  grid-area: coat;
+}
+
+li p {
+  margin: 0.2em;
+}
+ 
+
+
+/* RatSort styles*/
+
+select {
+  background-color:rgb(191, 187, 247);
+  padding: 0.5em;
+  font-size:1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  box-shadow: 2px 2px 2px rgb(145, 113, 130);
+}
+
+#sort {
+  display: flex;
+  justify-content: center;
+}
+
+/* NewRat styles */
+
+form {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
+}
+
+form h2 {
+  margin-bottom: 1em;
+}
+
+form select {
+  padding: 0.1em;
+  margin-right: 0.5em;
+  font-weight: 400;
+}
+
+label {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+form p {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+form input {
+  background-color:rgb(228, 187, 247);
+  border-radius: 0.5em;
+  padding: 0.3em;
+  border-width: 0.1em;;
+}
+
+#age-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#body-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add {
+  font-size:1em ;
+  font-weight: bold;
+  padding: 0.5em;
+  background-color:rgb(191, 187, 247) ;
+  box-shadow: 5px 5px 5px rgb(145, 113, 130);
+}
+
+#add:active {
+  box-shadow: 2px 2px 2px rgb(145, 113, 130);
+}
+
+/* Footer styles */
+
+#footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient( rgb(191, 187, 247), rgb(243, 226, 235),rgb(228, 187, 247));
+  padding: 1em;
+
+}
+
+#footer-wrapper img {
+  max-height: 5em;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 1200px){
+
+  form {
+    width: 90%
+  }
+  
+  ul {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer-wrapper{
+    display: block;
+    text-align: center;
+  }
+
+  #footer-wrapper h4 {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+   
+  }
+
+  #footer-wrapper img {
+   margin-left: auto;
+   margin-right: auto;
+   display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  li {
+    min-width: 10em;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  li{
+    flex-basis: 40%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  ul {
+    width: 100%;
+  }
+
+  li {
+    flex-basis: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "icon name"
+    "icon age"
+    "icon color"
+    "icon eyes"
+    "icon mark"
+    "icon body"
+    "icon coat"
+    ;
+  }
+
+  li h2 {
+    grid-area: name;
+  }
+  
+  li h3 {
+    grid-area: age;
+  }
+  .color {
+    margin-top: 1em;
+    grid-area: color;
+  }
+  .eyes {
+    grid-area: eyes;
+  }
+  
+  .mark {
+    grid-area: mark;
+  }
+  
+  .body {
+    grid-area: body;
+  }
+  
+  .coat {
+    grid-area: coat;
+  }
+
+  .ratIcon {
+    max-width: 15em;
+    align-self: center;
+    justify-self:center;
+    grid-area: icon;
+  }
+  header {
+    width: 100%;
+  }
+  
+
+  
+  form {
+    width: 90%;
+    border-radius: 1em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15% 1fr 15% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "l-name name name name"
+    "age age age age"
+    "l-color color l-eyes eyes"
+    "l-markings markings l-coat coat"
+    "body body body body"
+    "add add add add"
+    ;
+  }
+
+  form h2 {
+    grid-area: header;
+  }
+
+  label[for="name"] {
+    grid-area: l-name;
+  }
+  #name {
+    grid-area: name;
+  }
+
+  label[for="color"] {
+    grid-area: l-color;
+  }
+  #color {
+    grid-area: color;
+  }
+
+  label[for="eyes"] {
+    grid-area: l-eyes;
+  }
+  #eyes {
+    grid-area: eyes;
+  }
+
+  label[for="markings"] {
+    grid-area: l-markings;
+  }
+  #marking {
+    grid-area: markings;
+  }
+
+  label[for="coat"] {
+    grid-area: l-coat;
+  }
+  #coat {
+    grid-area: coat;
+  }
+
+  #body-type {
+    grid-area: body;
+  }
+
+  #add {
+    grid-area: add;
+  }
+
+  #age-form {
+    margin: 0;
+    align-items: center;
+    display: grid;
+    grid-area: age;
+    align-items: center;
+    grid-template-columns: 15% 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "age l-years years l-months months"
+  }
+
+  #age-form p{
+    grid-area: age;
+  }
+
+  label[for="years"]{
+    grid-area: l-years;
+  }
+  #years{
+    grid-area: years;
+  } 
+
+  label[for="months"]{
+    grid-area: l-months;
+  }
+  #months{
+    grid-area: months;
+  }
+}
+
+/* 
+To do:
+
+@media only screen and (max-width: 600px){
+ 
+} */
+ 
+
